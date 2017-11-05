@@ -26,8 +26,8 @@ define([
             });
         }
     ];
-    var routerModule = angular.module("routerModule", ["ui.router"]);
-    routerModule.config(serviceConfig);
+    var module = angular.module("routerModule", ["ui.router"]);
+    module.config(serviceConfig);
 
-    return routerModule
+    return module
 });

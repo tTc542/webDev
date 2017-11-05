@@ -1,13 +1,15 @@
 define([
         "router",
         "routeConfig",
-        "utilFunc"
-    ], function(router, routeConfig, utilFunc) {
+        "utilFunc",
+        "bizRouteConfig"
+    ], function(router, routeConfig, utilFunc, bizRouteConfig) {
 
     var deps = [
         "ng",
         "ui.router",
-        routeConfig.name
+        routeConfig.name,
+        bizRouteConfig.name
     ];
     var app = angular.module("app", deps);
 

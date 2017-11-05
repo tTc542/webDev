@@ -7,7 +7,9 @@ require.config({
         "router": "lib/angular-ui-router",
 
         "framework": "src/framework/framework",
+        "lazy": "src/framework/lazyload",
         "routeConfig": "src/framework/config/routeConfig",
+        "bizRouteConfig": "src/business/config/routeConfig",
         "utilFunc": "src/services/utilFunc"
     },
     shim: {
