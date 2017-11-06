@@ -5,8 +5,8 @@ define([], function () {
         * To prevent reverse injection
         * @param url {str}
         * */
-        this.safeOpen = function (url) {
-            var win = window.open(url);
+        this.safeOpen = function (url, extra) {
+            var win = window.open(url, extra);
             win.opener = null;
         };
 
@@ -37,6 +37,7 @@ define([], function () {
                 }
             }
         };
+
     };
 
     return utilService

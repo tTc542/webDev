@@ -1,10 +1,10 @@
 define([], function () {
 
-    var ctrl = ["$timeout", function ($timeout, $scope) {
-        $scope.msg = "from page 1";
-    }];
+    var ctrl = function ($scope) {
+        $scope.msg = "from page1Ctrl";
+    };
 
-    var module = angular.module("bizModule");
-    module.controller("page1Ctrl", ctrl);
+    var module = angular.module("routerModule");
+    module.lazyController("page1Ctrl", ctrl);
     return module
 });

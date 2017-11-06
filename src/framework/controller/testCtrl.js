@@ -4,5 +4,7 @@ define([], function () {
         $scope.msg = "from test controller";
     };
 
-    return ctrl
+    var module = angular.module("routerModule");
+    module.lazyController("testCtrl", ctrl);
+    return module
 });
