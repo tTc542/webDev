@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>App</title>
-        <link rel="stylesheet" href="theme/css/main.css">
-    </head>
-    <body ng-controller="frameworkCtrl">
-        <div ng-include="template.headerTpl"></div>
-        <div id="content" class="mb40 mt40">
-            <div class="pull-left menu" ng-include="template.menuTpl"></div>
-            <div class="pull-right view" ui-view></div>
-        </div>
-        <div ng-include="template.footerTpl"></div>
-    </body>
-    <!--toggle & config-->
-    <script type="text/javascript" src="config.js"></script>
-    <!--entry-->
-    <script type="text/javascript" src="lib/require.js" data-main="main"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="theme/css/main.css">
+</head>
+<body ng-controller="frameworkCtrl">
+<div ng-include="template.headerTpl"></div>
+<div id="content" class="mb40 mt40">
+    <div class="pull-left menu" ng-include="template.menuTpl"></div>
+    <div class="pull-right view" ui-view></div>
+</div>
+<div ng-include="template.footerTpl"></div>
+</body>
+<!--toggle & config-->
+<script type="text/javascript" src="config.js"></script>
+<!--entry-->
+<script type="text/javascript" src="lib/require.js" data-main="main"></script>
 </html>

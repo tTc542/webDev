@@ -13,22 +13,12 @@ function queryArg(k) {
 }
 
 function getCookie(k) {
-    var cookieList = document.cookie.split(';');
-    for (var i in cookieList) {
-        if (cookieList[i].split("=")[0] === k) {
-            return cookieList[i].split("=")[1]
-        }
-    }
+    var match = document.cookie.match(new RegExp(k + "=([^;]+)"));
+    if (match) return match[1]
 }
 
 function setCookie(k, v) {
-    var c = getCookie(k);
-    if (!c) {
-        var s = document.cookie ? ";" + k + "=" + v : k + "=" + v;
-        document.cookie += s;
-    } else {
-        document.cookie = document.cookie.replace(c, v)
-    }
+    document.cookie = k + "=" + v + ";path=/"
 }
 
 

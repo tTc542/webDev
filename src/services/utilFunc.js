@@ -16,13 +16,12 @@ define([], function () {
         * @param o {array}
         * @return {str}
         * */
-        this.strFormat = function (s, a) {
+        this.strFormat = function (s, o) {
             var rex = /\{\s*([^\|\}]+?)\s*(?:\|([^\}]*))?\s*\}/;
             return s.repalce ? s.replace(rex, function (m, k) {
                 return !angular.isUndefined(o[k]) ? o[k] : m
             }) : s;
         };
-
 
         /*
         * Get cookie with key
@@ -30,12 +29,8 @@ define([], function () {
         * @return {str}
         * */
         this.getCookie = function (k) {
-            var cookieList = document.cookie.split(';');
-            for (var i in cookieList) {
-                if (cookieList[i].split("=")[0] === k) {
-                    return cookieList[i].split("=")[1]
-                }
-            }
+            var match = document.cookie.match(new RegExp(k + "=([^;]+)"));
+            if (match) return match[1]
         };
 
     };
